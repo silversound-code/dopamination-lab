@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dopamination Lab</title>
+    <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    }
+    h1 {
+    color: #333;
+    }
+    button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    }
+    button:hover {
+    background-color: #45a049;
+    }
+    .log {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #555;
+    }
+    </style>
+</head>
+<body>
+    <h1>🧠 Dopamination Lab</h1>
+    <p>도파민 해소 미션을 시작할 준비가 되었나요?</p>
+    <button onclick="startMission()">미션 시작!</button>
+    <div class="log" id="log"></div>
+    
+<script>
+function startMission() {
+    const log = document.getElementById('log');
+    const missions = [
+        '30초 동안 눈 감고 깊게 숨쉬기',
+        '핸드폰 내려놓고 주변을 1분 동안 관찰하기',
+        '물 한잔 마시고 스트레칭 하기',
+        '눈을 감고 떠오르는 생각을 흘려보내기',
+        '하루 중 가장 감사했던 순간 떠올리기'
+    ];
+const randomMission = missions[Math.floor(Math.random() * missions.length)];
+log.textContent = `🎯 오늘의 미션: ${randomMission}`;
+}
+</script>
+</body>
+</html>
